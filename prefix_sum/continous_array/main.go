@@ -34,7 +34,7 @@ func findMaxLength(nums []int) int {
 		if one == zero {
 			maxLength = one + zero
 		} else {
-			prevIndex := diffIndices[one-zero]
+			prevIndex := diffIndices[diff]
 			maxLength = max(maxLength, i-prevIndex)
 		}
 	}
