@@ -43,24 +43,34 @@ func main() {
 }
 
 func threeSum(nums []int) [][]int {
+	// List to store the each sub array that satisfies the given condition.
 	res := [][]int{}
 	// Sort the array
 	sort.Ints(nums)
 
 	n := len(nums)
 
+	// Iterate over the number until len(nums)-2, because we need triplets
 	for i := 0; i < n-2; i++ {
+		// In the sorted list, if the nums[i] and nums[i-1] are same continue
+		// the loop to avoid duplicates.
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
 
+		// Now use the Two pointers approach to find the other two numbers
 		l, r := i+1, n-1
 		for l < r {
+			// Calculate the sum of triplets
 			sum := nums[i] + nums[l] + nums[r]
 
+			// If sum equals to zero, then add triplets list to the response list.
 			if sum == 0 {
 				res = append(res, []int{nums[i], nums[l], nums[r]})
 				l++
+				// There might be more than two duplicates in the nums list -3, -3, -3.
+				// In the top iteration we skipped only first duplicate, this will skip
+				// if there are any other duplicates.
 				for l < r && nums[l] == nums[l-1] {
 					l++
 				}
