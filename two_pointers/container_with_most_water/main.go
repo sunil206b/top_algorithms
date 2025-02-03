@@ -41,9 +41,7 @@ func maxArea(height []int) int {
 		width := right - left
 		area := width * min(height[right], height[left])
 
-		if area > maxWater {
-			maxWater = area
-		}
+		maxWater = max(maxWater, area)
 
 		if height[left] < height[right] {
 			left++
