@@ -10,6 +10,9 @@
 // BFS guarantees the shortest path in an unweighted graph.
 // It efficiently checks if T is reachable from S without getting stuck in water cells.
 
+// Time Complexity
+// O(N²) in the worst case, since we visit each cell once.
+
 package main
 
 import "fmt"
