@@ -6,7 +6,7 @@
 // minimal distance to C along the path is maximal. Use the L1 (aka Manhatton)
 // distance measure, i.e, the sum of the horizontal and vertical distances.
 
-// Mouse Pathfinding Problem: Avoiding the Cat 🐱
+// Mouse Path finding Problem: Avoiding the Cat 🐱
 // Given an N × N grid with:
 
 // S (Mouse's Start Position)
