@@ -53,8 +53,7 @@ func printNodesIteratively(graph map[string][]string, startNode string) {
 			visited[node] = true
 			fmt.Print(node, " ")
 
-			for i := len(graph[node]) - 1; i >= 0; i-- {
-				neighbor := graph[node][i]
+			for _, neighbor := range graph[node] {
 				if !visited[neighbor] {
 					stack = append(stack, neighbor)
 				}
